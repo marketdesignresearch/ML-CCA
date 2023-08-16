@@ -265,7 +265,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--domain", help="name of the domain to run", default= 'LSVM', type=str)
     parser.add_argument("--init_method", help="method for the Qinit queries, options: random, cca", default= 'cca', type=str)
-    parser.add_argument("--qinit", help="number of initial queries", default= 10, type=int)
+    parser.add_argument("--qinit", help="number of initial queries", default= 20, type=int)
     parser.add_argument("--seed", help="auction instance seed to run", default= 184, type=int)
     parser.add_argument("--new_query_option", help="new query option", default= 'gd_linear_prices_on_W_v3', type=str)  # options: gd_linear_prices_on_W, gd_linear_prices_on_W_v2, gd_linear_prices_on_W_v3, cca and gd_linear_prices_on_W_v3_cheating
 
