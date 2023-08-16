@@ -46,64 +46,29 @@ $ python -m pip install gurobipy
 ## SATS
 In requirements.txt you ran pip install pysats. Finally, you have to set the PYJNIUS_CLASSPATH environment variable to the absolute path of the lib folder.
 
-To automatically do this when activating the your conda evironment do the following:
-
-* Locate the directory for the conda environment in your Anaconda Prompt by running in the command shell %CONDA_PREFIX%.
-
-* Enter that directory and create these subdirectories and files:
-
 ```bash
-cd %CONDA_PREFIX%
-mkdir .\etc\conda\activate.d
-mkdir .\etc\conda\deactivate.d
-type NUL > .\etc\conda\activate.d\env_vars.bat
-type NUL > .\etc\conda\deactivate.d\env_vars.bat
+conda env config vars set PYJNIUS_CLASSPATH=<path to project>/MLCA_DQ/src/lib
 ```
 
-* Edit .\etc\conda\activate.d\env_vars.bat as follows:
-
-set PYJNIUS_CLASSPATH=C:\path\to\lib\
-
-* Edit .\etc\conda\deactivate.d\env_vars.bat as follows:
-
-set PYJNIUS_CLASSPATH=
-
-When you run conda activate <name_of_your_environment> the environment variable PYJNIUS_CLASSPATH is set to the value you wrote in the env_vars.bat file. When you run conda deactivate, this variable is erased.
+When you run conda activate <name_of_your_environment> the environment variable PYJNIUS_CLASSPATH is set to the value you specified above. When you run conda deactivate, this variable is erased.
 
 
 ## How to run
 
-### 1. BOCA: using our uUBs $\mathcal{M}_i^{\text{uUB}}$ in the acquisition function $\mathcal{A}:=\sum_i \mathcal{M}_i^{\text{uUB}}$.
-
-To start BOCA for a specific quantile parameter $q$, a SATS domain (LSVM, SRVM, and MRVM), and a seed run the following command:
-
+### 1. To start ML-CCA for a specific SATS domain (options include GSVM, LSVM, SRVM, and MRVM) and seed and a specific number of Qinit rounds following the CCA price update rule,  run the following command:
 ```bash
-python sim_mlca.py --domain=LSVM --q=0.9 --seed=10001 --acquisition=uUB_model
+python3 sim_mlca_dq.py --domain GSVM --qinit 20 --seed 157 --new_query_option gd_linear_prices_on_W_v3
 ```
 
-This will create a results folder where you then find in results\LSVM\0.9\uUB_model the following files
-
-1. a configuration file: config.json
-2. a log file: log.txt
-3. a result file: results.json.
-
-Specifically, results.json contains the efficiency of the final allocation of the BOCA mechanism in the field "MLCA Efficiency". Note that in sim_mlca.py, we set the parameters (Qinit, Qmax, Qround) = (40, 100, 4) to their default values that were used to create the results in Table 1.
-
-### 2. OUR-MVNN-MLCA: using our mean MVNNs $\mathcal{M}_i^{\text{mean}}$ in the acquisition function $\mathcal{A}:=\sum_i \mathcal{M}_i^{\text{mean}}$. 
-
-To start OUR-MVNN-MLCA for a specific quantile parameter $q$, a SATS domain (LSVM, SRVM, and MRVM), and a seed run the following command:
-
+### 2. To start CCA for a specific SATS domain (GSVM, LSVM, SRVM, and MRVM) and seed and a specific number of Qinit rounds following the CCA price update rule,  run the following command:
 ```bash
-python sim_mlca.py --domain=LSVM --q=0.9 --seed=10001 --acquisition=mean_model
+python3 sim_mlca_dq.py --domain GSVM --seed 157 --new_query_option cca
 ```
+By changing the dictionary parameters in the sim_mlca_dq.py file, one can change various settings of the mechanism, such as the whether to use weights and biases tracking, the reserve prices, the mMVNN hyperparameters and the hyperparamters for next price vector generation. The default values are set to those that we used for our experiments. For all of those hyperparameters in the code, the comments contain a #NOTE specifycing in which hyparparameter in the paper description they correspond to. 
+The most convenient way of tracking results is WANDB tracking. 
+The main plots to look at would be: efficiency clock bids per clock round and efficiency clock bids raised per clock round against the clock round step metric, as well as found clearing prices per iteration (i.e., after the Qinit clock rounds) against the iteration step metric. These plots correspond to the main results that we report in the paper. 
+To distinguish between our ML-CCA and the original CCA, once cna group the runs by the field "new_query_option". 
 
-This will create a results folder where you then find in results\LSVM\0.9\mean_model the following files
-
-1. a configuration file: config.json
-2. a log file: log.txt
-3. a result file: results.json.
-
-Specifically, results.json contains the efficiency of the final allocation of the OUR-MVNN-MLCA mechanism in the field "MLCA Efficiency".
 
 
 
