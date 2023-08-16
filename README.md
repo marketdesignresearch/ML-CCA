@@ -64,7 +64,7 @@ python3 sim_mlca_dq.py --domain GSVM --qinit 20 --seed 157 --new_query_option gd
 ```bash
 python3 sim_mlca_dq.py --domain GSVM --seed 157 --new_query_option cca
 ```
-By changing the dictionary parameters in the sim_mlca_dq.py file, one can change various settings of the mechanism, such as the whether to use weights and biases tracking, the reserve prices, the mMVNN hyperparamters and the hyperparamters for next price vector generation. The default values are set to those that we used for our experiments. 
+By changing the dictionary parameters in the sim_mlca_dq.py file, one can change various settings of the mechanism, such as the whether to use weights and biases tracking, the reserve prices, the mMVNN hyperparameters and the hyperparamters for next price vector generation. The default values are set to those that we used for our experiments. For all of those hyperparameters in the code, the comments contain a #NOTE specifycing in which hyparparameter in the paper description they correspond to. 
 The most convenient way of tracking results is WANDB tracking. 
 The main plots to look at would be: efficiency clock bids per clock round and efficiency clock bids raised per clock round against the clock round step metric, as well as found clearing prices per iteration (i.e., after the Qinit clock rounds) against the iteration step metric. These plots correspond to the main results that we report in the paper. 
 To distinguish between our ML-CCA and the original CCA, once cna group the runs by the field "new_query_option". 
