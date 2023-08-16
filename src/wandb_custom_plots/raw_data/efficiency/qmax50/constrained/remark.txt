@@ -1,0 +1,5 @@
+INFO
+
+Data for Tables 7 and 8 in Appendix for Section "Experimental Results for a Reduced Number of \Qmax"
+
+We compare here MLCA-CCA constrained version against CCA. We use Qinit=20 in LSVM, GSVM, and SRVM and Qinit=20 in MRVM.

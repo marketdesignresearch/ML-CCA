@@ -1,0 +1,38 @@
+GSVM clearingPrice
+           ML-CCA     CCA
+count  100.000000  100.00
+mean     0.510000    0.01
+std      0.502418    0.10
+min      0.000000    0.00
+25%      0.000000    0.00
+50%      1.000000    0.00
+75%      1.000000    0.00
+max      1.000000    1.00
+Paired t-test with HA: ML-CCA > CCA and H0: ML-CCA <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=7.03599367316589e-17 | statistic=9.9498743710662 | df=99 | REJECT H0
+
+LSVM clearingPrice
+           ML-CCA    CCA
+count  100.000000  100.0
+mean     0.170000    0.0
+std      0.377525    0.0
+min      0.000000    0.0
+25%      0.000000    0.0
+50%      0.000000    0.0
+75%      0.000000    0.0
+max      1.000000    0.0
+Paired t-test with HA: ML-CCA > CCA and H0: ML-CCA <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=9.16615906300479e-06 | statistic=4.503011040818681 | df=99 | REJECT H0
+
+SRVM clearingPrice
+           ML-CCA         CCA
+count  100.000000  100.000000
+mean     0.130000    0.040000
+std      0.337998    0.196946
+min      0.000000    0.000000
+25%      0.000000    0.000000
+50%      0.000000    0.000000
+75%      0.000000    0.000000
+max      1.000000    1.000000
+Paired t-test with HA: ML-CCA > CCA and H0: ML-CCA <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=0.0011519828563450426 | statistic=3.129090729143018 | df=99 | REJECT H0

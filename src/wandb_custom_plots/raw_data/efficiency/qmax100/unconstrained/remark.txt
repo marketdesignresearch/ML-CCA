@@ -1,0 +1,3 @@
+INFO
+
+We compare here MLCA-CCA unconstrained version against CCA. We use Qinit=20 in LSVM, GSVM, and SRVM and Qinit=70 in MRVM.

@@ -1,0 +1,4 @@
+INFO
+
+Data for Table 1 (Main Table) and Tables 5 and 6 in Appendix. 
+Concretely, we compare here MLCA-CCA constained version against CCA. We use Qinit=20 ion LSVM, GSVM, and SRVM and Qinit=50 in MRVM.

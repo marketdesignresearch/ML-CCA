@@ -1,0 +1,14 @@
+Cython
+pyjnius==1.3.0
+matplotlib
+numpyencoder
+pandas
+scipy
+torch
+torchinfo
+numpy
+scikit_learn
+tqdm
+docplex
+pysats
+wandb

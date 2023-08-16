@@ -1,0 +1,341 @@
+GSVM profitMax
+       CCA-MLDQ         CCA
+count     100.0  100.000000
+mean        1.0    0.999964
+std         0.0    0.000336
+min         1.0    0.996644
+25%         1.0    1.000000
+50%         1.0    1.000000
+75%         1.0    1.000000
+max         1.0    1.000000
+Paired t-test with HA: CCA_MLDQ > CCA and H0: CCA_MLDQ <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=0.14332941336599228 | statistic=1.0712563449450174 | df=99 | NOT REJECT H0
+
+GSVM clock
+         CCA-MLDQ         CCA
+count  100.000000  100.000000
+mean     0.978416    0.905054
+std      0.040601    0.072468
+min      0.728672    0.679938
+25%      0.969979    0.881369
+50%      1.000000    0.922548
+75%      1.000000    0.950297
+max      1.000000    1.000000
+Paired t-test with HA: CCA_MLDQ > CCA and H0: CCA_MLDQ <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=4.236484376344636e-17 | statistic=10.05087632845306 | df=99 | REJECT H0
+
+GSVM raised
+         CCA-MLDQ         CCA
+count  100.000000  100.000000
+mean     0.985891    0.937035
+std      0.023861    0.047552
+min      0.901143    0.758529
+25%      0.981328    0.915658
+50%      1.000000    0.939544
+75%      1.000000    0.968260
+max      1.000000    1.000000
+Paired t-test with HA: CCA_MLDQ > CCA and H0: CCA_MLDQ <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=4.21325403863057e-18 | statistic=10.510909808040232 | df=99 | REJECT H0
+
+LSVM profitMax
+        CCA-MLDQ         CCA
+count  99.000000  100.000000
+mean    0.999537    0.998028
+std     0.002268    0.007417
+min     0.985327    0.949216
+25%     1.000000    1.000000
+50%     1.000000    1.000000
+75%     1.000000    1.000000
+max     1.000000    1.000000
+Paired t-test with HA: CCA_MLDQ > CCA and H0: CCA_MLDQ <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=0.014491002869006358 | statistic=2.216329181839993 | df=98 | REJECT H0
+
+LSVM clock
+        CCA-MLDQ         CCA
+count  99.000000  100.000000
+mean    0.908104    0.822123
+std     0.089036    0.081816
+min     0.538376    0.483973
+25%     0.867724    0.776312
+50%     0.922466    0.829835
+75%     0.984447    0.875082
+max     1.000000    0.999825
+Paired t-test with HA: CCA_MLDQ > CCA and H0: CCA_MLDQ <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=2.4640186222687104e-16 | statistic=9.719094321151386 | df=98 | REJECT H0
+
+LSVM raised
+        CCA-MLDQ         CCA
+count  99.000000  100.000000
+mean    0.959133    0.915248
+std     0.041081    0.048822
+min     0.807351    0.789427
+25%     0.933143    0.882396
+50%     0.969578    0.914855
+75%     1.000000    0.955320
+max     1.000000    1.000000
+Paired t-test with HA: CCA_MLDQ > CCA and H0: CCA_MLDQ <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=3.082788863194501e-13 | statistic=8.287136605947005 | df=98 | REJECT H0
+
+SRVM profitMax
+       CCA-MLDQ    CCA
+count     100.0  100.0
+mean        1.0    1.0
+std         0.0    0.0
+min         1.0    1.0
+25%         1.0    1.0
+50%         1.0    1.0
+75%         1.0    1.0
+max         1.0    1.0
+Paired t-test with HA: CCA_MLDQ > CCA and H0: CCA_MLDQ <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=nan | statistic=nan | df=99 | NOT REJECT H0
+
+SRVM clock
+         CCA-MLDQ         CCA
+count  100.000000  100.000000
+mean     0.995785    0.994746
+std      0.005032    0.005871
+min      0.973481    0.973543
+25%      0.996127    0.993188
+50%      0.997005    0.996826
+75%      0.999327    0.997854
+max      1.000000    1.000000
+Paired t-test with HA: CCA_MLDQ > CCA and H0: CCA_MLDQ <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=0.08828085372906837 | statistic=1.3611334942004514 | df=99 | NOT REJECT H0
+
+SRVM raised
+         CCA-MLDQ         CCA
+count  100.000000  100.000000
+mean     0.999323    0.997215
+std      0.000844    0.003951
+min      0.996721    0.980540
+25%      0.998913    0.996620
+50%      0.999643    0.998872
+75%      1.000000    0.999579
+max      1.000000    1.000000
+Paired t-test with HA: CCA_MLDQ > CCA and H0: CCA_MLDQ <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=2.9153201543663105e-07 | statistic=5.343907938486154 | df=99 | REJECT H0
+
+MRVM profitMax
+         CCA-MLDQ         CCA
+count  100.000000  100.000000
+mean     0.930442    0.902654
+std      0.015616    0.034669
+min      0.860278    0.824108
+25%      0.925374    0.873214
+50%      0.931725    0.912298
+75%      0.937946    0.929195
+max      0.960228    0.957870
+Paired t-test with HA: CCA_MLDQ > CCA and H0: CCA_MLDQ <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=1.606383449852964e-14 | statistic=8.867695110377223 | df=99 | REJECT H0
+
+MRVM clock
+         CCA-MLDQ         CCA
+count  100.000000  100.000000
+mean     0.921102    0.886960
+std      0.021631    0.048477
+min      0.776306    0.722235
+25%      0.917069    0.859436
+50%      0.924030    0.901955
+75%      0.931226    0.923775
+max      0.956275    0.953431
+Paired t-test with HA: CCA_MLDQ > CCA and H0: CCA_MLDQ <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=2.41799032950973e-10 | statistic=6.906341169946684 | df=99 | REJECT H0
+
+MRVM raised
+         CCA-MLDQ         CCA
+count  100.000000  100.000000
+mean     0.924224    0.892775
+std      0.021778    0.038951
+min      0.776306    0.802614
+25%      0.919708    0.863180
+50%      0.927895    0.902477
+75%      0.934094    0.925003
+max      0.957737    0.954893
+Paired t-test with HA: CCA_MLDQ > CCA and H0: CCA_MLDQ <= CCA (alpha=0.05):
+Result paired t-test:  pvalue=1.3371696984197174e-12 | statistic=7.978071504422225 | df=99 | REJECT H0
+
+
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+GSVM_CCA-MLDQ_CLOCK_BIDS
+Number of Seeds: 100
+Length of each seed: 49
+EFFICIENCY: LBound:96.97, Mean: 97.84, UBound: 98.58           FOR PAPER: (96.97\,,\,97.84\,,\,98.58)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+GSVM_CCA-MLDQ_RAISED_CLOCK_BIDS
+Number of Seeds: 100
+Length of each seed: 49
+EFFICIENCY: LBound:98.10, Mean: 98.59, UBound: 99.03           FOR PAPER: (98.10\,,\,98.59\,,\,99.03)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+GSVM_CCA_CLOCK_BIDS
+Number of Seeds: 100
+Length of each seed: 49
+EFFICIENCY: LBound:89.05, Mean: 90.51, UBound: 91.88           FOR PAPER: (89.05\,,\,90.51\,,\,91.88)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+GSVM_CCA_RAISED_CLOCK_BIDS
+Number of Seeds: 100
+Length of each seed: 49
+EFFICIENCY: LBound:92.74, Mean: 93.70, UBound: 94.62           FOR PAPER: (92.74\,,\,93.70\,,\,94.62)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+LSVM_CCA-MLDQ_CLOCK_BIDS
+Number of Seeds: 99
+Length of each seed: 49
+EFFICIENCY: LBound:88.99, Mean: 90.81, UBound: 92.50           FOR PAPER: (88.99\,,\,90.81\,,\,92.50)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+LSVM_CCA-MLDQ_RAISED_CLOCK_BIDS
+Number of Seeds: 99
+Length of each seed: 49
+EFFICIENCY: LBound:95.07, Mean: 95.91, UBound: 96.70           FOR PAPER: (95.07\,,\,95.91\,,\,96.70)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+LSVM_CCA_CLOCK_BIDS
+Number of Seeds: 100
+Length of each seed: 49
+EFFICIENCY: LBound:80.57, Mean: 82.21, UBound: 83.77           FOR PAPER: (80.57\,,\,82.21\,,\,83.77)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+LSVM_CCA_RAISED_CLOCK_BIDS
+Number of Seeds: 100
+Length of each seed: 49
+EFFICIENCY: LBound:90.59, Mean: 91.52, UBound: 92.46           FOR PAPER: (90.59\,,\,91.52\,,\,92.46)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+SRVM_CCA-MLDQ_CLOCK_BIDS
+Number of Seeds: 100
+Length of each seed: 49
+EFFICIENCY: LBound:99.47, Mean: 99.58, UBound: 99.67           FOR PAPER: (99.47\,,\,99.58\,,\,99.67)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+SRVM_CCA-MLDQ_RAISED_CLOCK_BIDS
+Number of Seeds: 100
+Length of each seed: 49
+EFFICIENCY: LBound:99.92, Mean: 99.93, UBound: 99.95           FOR PAPER: (99.92\,,\,99.93\,,\,99.95)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+SRVM_CCA_CLOCK_BIDS
+Number of Seeds: 100
+Length of each seed: 49
+EFFICIENCY: LBound:99.36, Mean: 99.47, UBound: 99.59           FOR PAPER: (99.36\,,\,99.47\,,\,99.59)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+SRVM_CCA_RAISED_CLOCK_BIDS
+Number of Seeds: 100
+Length of each seed: 49
+EFFICIENCY: LBound:99.64, Mean: 99.72, UBound: 99.79           FOR PAPER: (99.64\,,\,99.72\,,\,99.79)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+MRVM_CCA-MLDQ_CLOCK_BIDS
+Number of Seeds: 100
+Length of each seed: 49
+EFFICIENCY: LBound:91.63, Mean: 92.11, UBound: 92.50           FOR PAPER: (91.63\,,\,92.11\,,\,92.50)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+MRVM_CCA-MLDQ_RAISED_CLOCK_BIDS
+Number of Seeds: 100
+Length of each seed: 49
+EFFICIENCY: LBound:91.94, Mean: 92.42, UBound: 92.81           FOR PAPER: (91.94\,,\,92.42\,,\,92.81)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+MRVM_CCA_CLOCK_BIDS
+Number of Seeds: 100
+Length of each seed: 49
+EFFICIENCY: LBound:87.70, Mean: 88.70, UBound: 89.61           FOR PAPER: (87.70\,,\,88.70\,,\,89.61)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+MRVM_CCA_RAISED_CLOCK_BIDS
+Number of Seeds: 100
+Length of each seed: 49
+EFFICIENCY: LBound:88.52, Mean: 89.28, UBound: 90.02           FOR PAPER: (88.52\,,\,89.28\,,\,90.02)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+GSVM_CCA-MLDQ_PROFITMAX
+Length of results: 100
+EFFICIENCY: LBound:100.00, Mean: 100.00, UBound: 100.00           FOR PAPER: (100.00\,,\,100.00\,,\,100.00)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+GSVM_CCA_PROFITMAX
+Length of results: 100
+EFFICIENCY: LBound:99.99, Mean: 100.00, UBound: 100.00           FOR PAPER: (99.99\,,\,100.00\,,\,100.00)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+LSVM_CCA-MLDQ_PROFITMAX
+Length of results: 100
+EFFICIENCY: LBound:99.90, Mean: 99.95, UBound: 99.99           FOR PAPER: (99.90\,,\,99.95\,,\,99.99)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+LSVM_CCA_PROFITMAX
+Length of results: 100
+EFFICIENCY: LBound:99.64, Mean: 99.80, UBound: 99.93           FOR PAPER: (99.64\,,\,99.80\,,\,99.93)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+SRVM_CCA-MLDQ_PROFITMAX
+Length of results: 100
+EFFICIENCY: LBound:100.00, Mean: 100.00, UBound: 100.00           FOR PAPER: (100.00\,,\,100.00\,,\,100.00)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+SRVM_CCA_PROFITMAX
+Length of results: 100
+EFFICIENCY: LBound:100.00, Mean: 100.00, UBound: 100.00           FOR PAPER: (100.00\,,\,100.00\,,\,100.00)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+MRVM_CCA-MLDQ_PROFITMAX
+Length of results: 100
+EFFICIENCY: LBound:92.73, Mean: 93.04, UBound: 93.34           FOR PAPER: (92.73\,,\,93.04\,,\,93.34)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+MRVM_CCA_PROFITMAX
+Length of results: 100
+EFFICIENCY: LBound:89.57, Mean: 90.27, UBound: 90.92           FOR PAPER: (89.57\,,\,90.27\,,\,90.92)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #

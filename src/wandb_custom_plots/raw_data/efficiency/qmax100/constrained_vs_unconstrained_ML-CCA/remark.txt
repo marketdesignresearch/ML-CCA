@@ -1,0 +1,5 @@
+INFO:
+
+Data for Tables 8 and 9 Section Comparing Constrained and Unconstrained W minimzation.
+
+Concretely, we compare Qinit=20 For LSVM, GSVM, and SRVM and Qinit=70 for MRVM (since at this point in time we only had Qinit=70 unconstrained for this Domain)

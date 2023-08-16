@@ -1,0 +1,21 @@
+{
+    "LSVM":{
+        "Regional": {"num_hidden_layers": 1, "num_hidden_units": 30, "lin_skip_connection": true, "learning_rate": 0.01, "l2_reg": 0.000001, "max_linear_prices_multiplier": 3, "epochs": 30},
+        "National": {"num_hidden_layers": 3, "num_hidden_units": 20, "lin_skip_connection": false, "learning_rate": 0.005, "l2_reg": 0.0001, "max_linear_prices_multiplier": 3, "epochs": 30}
+    }, 
+    "GSVM":{
+        "Regional": {"num_hidden_layers": 2, "num_hidden_units": 20, "lin_skip_connection": false, "learning_rate": 0.005, "l2_reg": 0.00001, "max_linear_prices_multiplier": 3, "epochs": 30},
+        "National": {"num_hidden_layers": 3, "num_hidden_units": 30, "lin_skip_connection": true, "learning_rate": 0.001, "l2_reg": 0.000001, "max_linear_prices_multiplier": 3, "epochs": 30}
+    },
+    "MRVM":{
+        "Local": {"num_hidden_layers": 3, "num_hidden_units": 20, "lin_skip_connection": true, "learning_rate": 0.005, "l2_reg": 0.000001, "max_linear_prices_multiplier": 3, "epochs": 100},
+        "Regional": {"num_hidden_layers": 2, "num_hidden_units": 20, "lin_skip_connection": true, "learning_rate": 0.001, "l2_reg": 0.001, "max_linear_prices_multiplier": 3, "epochs": 100},
+        "National": {"num_hidden_layers": 3, "num_hidden_units": 20, "lin_skip_connection": true, "learning_rate": 0.001, "l2_reg": 0.0001, "max_linear_prices_multiplier": 3, "epochs": 50}
+    },
+    "SRVM":{
+        "Local": {"num_hidden_layers": 2, "num_hidden_units": 20, "lin_skip_connection": true, "learning_rate": 0.01, "l2_reg": 0.0001, "max_linear_prices_multiplier": 60, "epochs": 30},
+        "Regional": {"num_hidden_layers": 1, "num_hidden_units": 20, "lin_skip_connection": true, "learning_rate": 0.01, "l2_reg":  0.0001, "max_linear_prices_multiplier": 60, "epochs": 50},
+        "National": {"num_hidden_layers": 1, "num_hidden_units": 30, "lin_skip_connection": false, "learning_rate": 0.005, "l2_reg": 0.00001, "max_linear_prices_multiplier": 60, "epochs": 70},
+        "High Frequency": {"num_hidden_layers": 2, "num_hidden_units": 20, "lin_skip_connection": false, "learning_rate": 0.01, "l2_reg": 0.00001, "max_linear_prices_multiplier": 60, "epochs": 30}
+    }
+}
