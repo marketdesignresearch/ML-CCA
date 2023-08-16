@@ -23,7 +23,7 @@ from pysats_ext import GenericWrapper
 
 CPLEXUtils = autoclass('org.marketdesignresearch.mechlib.utils.CPLEXUtils')
 SolveParams = autoclass('edu.harvard.econcs.jopt.solver.SolveParam')
-CPLEXUtils.SOLVER.setSolveParam(SolveParams.THREADS,20)    # TODO: Change the number of threads to be the same as in the script.    
+CPLEXUtils.SOLVER.setSolveParam(SolveParams.THREADS,20)    # NOTE: From this you can change the number of threads that CPLEX uses, important for parallelization    
 # --------------------------------------
 
 def main(domain, init_method, new_query_option, qinit, seed):
@@ -68,7 +68,6 @@ def main(domain, init_method, new_query_option, qinit, seed):
     elif domain == 'MRVM':
         num_bidders = 10
         num_items = 42
-    # 'SRVM': {'national': [5, 6], 'regional': [3, 4], 'high_frequency': [2], 'local': [0, 1]},
     elif domain == 'SRVM':
         num_bidders = 7
         num_items = 3
@@ -131,15 +130,14 @@ def main(domain, init_method, new_query_option, qinit, seed):
 
         TRAIN_parameters = {"number_val_data_points": 10,
                             "max_linear_prices_multiplier": hpo_dict[domain][bidder_type]['max_linear_prices_multiplier'], # NOTE: only used for "initial_demand_query_method=random"; they actually get loaded from the file
-                            "max_linear_price": all_bidders_max_linear_prices[i], # NOTE: only used for "initial_demand_query_method=random"; they actually get loaded from the file
-                            "scale": all_bidders_scales[i], # NOTE: they actually get loaded from the file
-                            "start_linear_item_prices": np.zeros(num_items), # NOTE: only used for "initial_demand_query_method=increasing" 
+                            "max_linear_price": all_bidders_max_linear_prices[i], 
+                            "scale": all_bidders_scales[i], 
+                            "start_linear_item_prices": np.zeros(num_items), 
                             "end_linear_item_prices": np.ones(num_items)* end_linear_item_prices_multiplier, # NOTE: only used for "initial_demand_query_method=increasing"
                             "price_file_name": 'values_for_null_price_seeds1-100.json',
                             "average_price_file_name": average_price_file_name,
                             'batch_size': 1,
-                            'epochs': hpo_dict[domain][bidder_type]['epochs'],      # TODO: Change back to original!!! 
-                            # 'epochs': 1, 
+                            'epochs': hpo_dict[domain][bidder_type]['epochs'],      
                             'l2_reg': hpo_dict[domain][bidder_type]['l2_reg'],
                             'learning_rate': hpo_dict[domain][bidder_type]['learning_rate'],
                             'clip_grad_norm': 1,
@@ -161,8 +159,8 @@ def main(domain, init_method, new_query_option, qinit, seed):
                             "cca_initial_prices_multiplier": 0.2 if domain in ['LSVM', 'MRVM'] else 1.6, # NOTE: only used for "initial_demand_query_method=cca", will multiply the initial prices. 
                             "calculate_profit_max_bids": False, # NOTE: This will calculate profit max bids for every ML-powered clock round, very expensive.
                             "calculate_profit_max_bids_unraised": False, 
-                            "calculate_profit_max_bids_specific_rounds": [50, 100],    
-                            "profit_max_grid": [5, 100],   # TODO: change back to [5, 100]
+                            "calculate_profit_max_bids_specific_rounds": [50, 100],  # NOTE: from this you can change in which clock rounds profit max bids will be calculated.
+                            "profit_max_grid": [5, 100],   # NOTE: from this you can change the number of profit max bids that will be used
                             'parallelize_training': True,
                             'calculate_efficiency_per_iteration': True, 
                             'dynamic_scaling': False if domain in ['GSVM', 'LSVM', 'SRVM'] else True,   # only true for MRVM  
@@ -174,10 +172,10 @@ def main(domain, init_method, new_query_option, qinit, seed):
                             'W_v2_lr': 1 if domain in ['GSVM', 'LSVM'] else 4 if domain in ['SRVM'] else 5 * 1000000,
                             'W_v2_lr_decay': 0.99 if domain in ['GSVM', 'LSVM', 'SRVM'] else 0.999, 
                             'W_v3_max_steps_without_improvement': 250,   # parameters for the new GD procedure to minimize W
-                            'W_v3_max_steps': 300,   # parameters for the new GD procedure to minimize W   #TODO: change back to 300 
-                            'W_v3_lr': 0.01, 
+                            'W_v3_max_steps': 300,   # parameters for the new GD procedure to minimize W  
+                            'W_v3_lr': 0.01,   # NOTE: here you can change all hyperparamters for the GD procedure to minimize W in the paper
                             'W_v3_lr_decay': 0.995, 
-                            'W_v3_filter_feasible': True if domain in ['GSVM', 'LSVM', 'SRVM', 'MRVM'] else False,  # if True: GD on W will return the minimum price vector that lead to a predicted FEASIBLE allocation, when possible. 
+                            'W_v3_filter_feasible': True if domain in ['GSVM', 'LSVM', 'SRVM', 'MRVM'] else False,  
                             'W_v3_feasibility_multiplier': 2 if domain in ['GSVM', 'LSVM', 'SRVM', 'MRVM'] else 0,  # punish over demand during GD by more than under-demand, because the first one leads to infeasible bids, which are harder to combine.
                             'W_v3_feasibility_multiplier_increase_factor': 1.01 if domain in ['GSVM', 'LSVM', 'SRVM', 'MRVM'] else 1,
                             'W_log_frequency': 10, # how often to log all details of W minimization, if wandb tracking is on.
@@ -250,11 +248,6 @@ def main(domain, init_method, new_query_option, qinit, seed):
     # --------------------------------------
 
 
-    if domain in ['GSVM', 'LSVM']:
-        version = '1.5'
-    else: 
-        version = '1.7'
-
     # 6. Run mechanism
     mechanism(SATS_parameters = SATS_parameters,
               TRAIN_parameters = TRAIN_parameters_all_bidders,
@@ -262,8 +255,8 @@ def main(domain, init_method, new_query_option, qinit, seed):
               mechanism_parameters = mechanism_parameters,
               MIP_parameters = MIP_parameters,
               res_path = res_path, 
-              wandb_tracking = False,  # TODO: Switch to true 
-              wandb_project_name = f"MLCCA_Domain_{domain}_v{version}"   # TODO: Change back to no test 
+              wandb_tracking = True,    # NOTE: from this you can turn on/off wandb tracking
+              wandb_project_name = f"ML-CCA_Domain_{domain}"   # NOTE: from this you can change the name of the wandb project 
               )
     # -------------------
 
@@ -271,7 +264,7 @@ def main(domain, init_method, new_query_option, qinit, seed):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--domain", help="name of the domain to run", default= 'LSVM', type=str)
-    parser.add_argument("--init_method", help="method for the Qinit queries, options: random, increasing, cca", default= 'cca', type=str)
+    parser.add_argument("--init_method", help="method for the Qinit queries, options: random, cca", default= 'cca', type=str)
     parser.add_argument("--qinit", help="number of initial queries", default= 10, type=int)
     parser.add_argument("--seed", help="auction instance seed to run", default= 184, type=int)
     parser.add_argument("--new_query_option", help="new query option", default= 'gd_linear_prices_on_W_v3', type=str)  # options: gd_linear_prices_on_W, gd_linear_prices_on_W_v2, gd_linear_prices_on_W_v3, cca and gd_linear_prices_on_W_v3_cheating
