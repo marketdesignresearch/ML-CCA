@@ -46,29 +46,11 @@ $ python -m pip install gurobipy
 ## SATS
 In requirements.txt you ran pip install pysats. Finally, you have to set the PYJNIUS_CLASSPATH environment variable to the absolute path of the lib folder.
 
-To automatically do this when activating the your conda evironment do the following:
-
-* Locate the directory for the conda environment in your Anaconda Prompt by running in the command shell %CONDA_PREFIX%.
-
-* Enter that directory and create these subdirectories and files:
-
 ```bash
-cd %CONDA_PREFIX%
-mkdir .\etc\conda\activate.d
-mkdir .\etc\conda\deactivate.d
-type NUL > .\etc\conda\activate.d\env_vars.bat
-type NUL > .\etc\conda\deactivate.d\env_vars.bat
+conda env config vars set PYJNIUS_CLASSPATH=<path to project>/MLCA_DQ/src/lib
 ```
 
-* Edit .\etc\conda\activate.d\env_vars.bat as follows:
-
-set PYJNIUS_CLASSPATH=C:\path\to\lib\
-
-* Edit .\etc\conda\deactivate.d\env_vars.bat as follows:
-
-set PYJNIUS_CLASSPATH=
-
-When you run conda activate <name_of_your_environment> the environment variable PYJNIUS_CLASSPATH is set to the value you wrote in the env_vars.bat file. When you run conda deactivate, this variable is erased.
+When you run conda activate <name_of_your_environment> the environment variable PYJNIUS_CLASSPATH is set to the value you specified above. When you run conda deactivate, this variable is erased.
 
 
 ## How to run
