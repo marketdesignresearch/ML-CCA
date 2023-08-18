@@ -55,12 +55,12 @@ When you run conda activate <name_of_your_environment> the environment variable 
 
 ## How to run
 
-### 1. To start ML-CCA for a specific SATS domain (options include GSVM, LSVM, SRVM, and MRVM) and seed and a specific number of Qinit rounds following the CCA price update rule,  run the following command:
+### 1. To start ML-CCA for a specific SATS domain (options include GSVM, LSVM, SRVM, and MRVM) and seed and a specific number of Qinit rounds following the CCA price update rule,  run the following command (from inside the src folder):
 ```bash
 python3 sim_mlca_dq.py --domain GSVM --qinit 20 --seed 157 --new_query_option gd_linear_prices_on_W_v3
 ```
 
-### 2. To start CCA for a specific SATS domain (GSVM, LSVM, SRVM, and MRVM) and seed and a specific number of Qinit rounds following the CCA price update rule,  run the following command:
+### 2. To start CCA for a specific SATS domain (GSVM, LSVM, SRVM, and MRVM) and seed and a specific number of Qinit rounds following the CCA price update rule,  run the following command (from inside the src folder):
 ```bash
 python3 sim_mlca_dq.py --domain GSVM --seed 157 --new_query_option cca
 ```
