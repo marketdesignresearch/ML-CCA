@@ -6,7 +6,7 @@ This is a piece of software used for computing the efficiency of the ML-CCA and 
 Ermis Soumalias*, Jakob Weissteiner*, Jakob Heiss, and Sven Seuken.<br/>
 Full paper version including appendix: [[pdf](https://arxiv.org/)]
 
-*These authors contributed equally.
+<sub><sup>*These authors contributed equally.</sup></sub>
 
 ## Requirements
 
