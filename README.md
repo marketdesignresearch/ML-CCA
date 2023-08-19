@@ -1,5 +1,10 @@
 # Machine Learning-powered Combinatorial Clock Auction (ML-CCA)
 
+This is a piece of software used for computing the efficiency of the ML-CCA and the CCA in the spectrum auction test suite (SATS). The proposed ML-CCA is described in detail in the following paper:
+
+**Machine Learning-powered Combinatorial Clock Auction**<br/>
+Ermis Soumalias, Jakob Weissteiner, Jakob Heiss, and Sven Seuken.<br/>
+Full paper version including appendix: [[pdf](https://arxiv.org/)]
 
 ## Requirements
 
