@@ -78,6 +78,6 @@ To distinguish between our ML-CCA and the original CCA, one can group the runs b
 
 ## Contact
 
-Maintained by Ermis Soumalias (Ermis Soumalias), Jakob Weissteiner (weissteiner), and Jakob Heiss (JakobHeiss).
+Maintained by Ermis Soumalias (ErmisCodes), Jakob Weissteiner (weissteiner), and Jakob Heiss (JakobHeiss).
 
 
