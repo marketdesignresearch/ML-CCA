@@ -263,7 +263,7 @@ def main(domain, init_method, new_query_option, qinit, seed):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--domain", help="name of the domain to run", default= 'LSVM', type=str)
+    parser.add_argument("--domain", help="name of the domain to run", default= 'GSVM', type=str)
     parser.add_argument("--init_method", help="method for the Qinit queries, options: random, cca", default= 'cca', type=str)
     parser.add_argument("--qinit", help="number of initial queries", default= 20, type=int)
     parser.add_argument("--seed", help="auction instance seed to run", default= 184, type=int)
