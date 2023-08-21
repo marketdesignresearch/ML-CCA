@@ -76,6 +76,8 @@ The most convenient way of tracking results is WANDB tracking.
 The main plots to look at would be: efficiency clock bids per clock round and efficiency clock bids raised per clock round against the clock round step metric, as well as found clearing prices per iteration (i.e., after the Qinit clock rounds) against the iteration step metric. These plots correspond to the main results that we report in the paper. 
 To distinguish between our ML-CCA and the original CCA, one can group the runs by the field "new_query_option". 
 
+## Contact
 
+Maintained by Ermis Soumalias (Ermis Soumalias), Jakob Weissteiner (weissteiner), and Jakob Heiss (JakobHeiss).
 
 
