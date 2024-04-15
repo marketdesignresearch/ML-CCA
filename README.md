@@ -4,7 +4,7 @@ This is a piece of software used for computing the efficiency of the ML-CCA and 
 
 **Machine Learning-powered Combinatorial Clock Auction**<br/>
 Ermis Soumalias*, Jakob Weissteiner*, Jakob Heiss, and Sven Seuken.<br/>
-[Proceedings of the AAAI Conference on Artificial Intelligence 2024](https://doi.org/10.1609/aaai.v38i9.28850) <br/>
+*In [Proceedings of the AAAI Conference on Artificial Intelligence Vol 38](https://doi.org/10.1609/aaai.v38i9.28850), Vancouver, CAN, Feb 2024* <br/>
 Full paper version including appendix: [[pdf](http://arxiv.org/abs/2308.10226)]
 
 <sub><sup>*These authors contributed equally.</sup></sub>
